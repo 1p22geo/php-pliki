@@ -71,7 +71,6 @@ class Client{
     }
 
     public static function del_client($client_id){
-        echo "starting del_cleint";
         $client = self::get_client($client_id);
         if(!$client){
             return 1;

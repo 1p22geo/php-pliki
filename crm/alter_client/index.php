@@ -14,6 +14,12 @@
         echo "No client";
     }
 
+    if(isset($_GET["nodata"])){
+        echo "Please type in the new data of the user";
+    }
+    if(isset($_GET["saved"])){
+        echo "Updated user!";
+    }
     if(!isset($_GET["id"])){
 echo '
 <form action="/crm/alter_client/" method="GET">

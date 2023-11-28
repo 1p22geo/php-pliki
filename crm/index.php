@@ -13,7 +13,7 @@
     <a href="/crm/show_client"><button class=" text-6xl border-2 w-fit p-2 rounded-xl border-slate-800	">wyświetl klientów</button></a>
     <a href="/crm/alter_client"><button class=" text-6xl border-2 w-fit p-2 rounded-xl border-slate-800	">zmień dane klienta</button></a>
     <a href="/crm/drop_client"><button class=" text-6xl border-2 w-fit p-2 rounded-xl border-slate-800	">usuń klienta</button></a>
-    <a href="/crm/show_email"><button class=" text-6xl border-2 w-fit p-2 rounded-xl border-slate-800	">pobierz adresy email</button>
+    <a href="/crm/data/clients.txt" target="_blank" download="data.txt"><button class=" text-6xl border-2 w-fit p-2 rounded-xl border-slate-800	">pobierz adresy email</button>
     </main>
 </body>
 </html>
