@@ -11,6 +11,12 @@
     if(isset($_GET["nodata"])){
         echo "<h1>Please type in the username and fasdgasdg</h1>"; //zrbcie frontend
     }
+    if(isset($_GET["saved"])){
+        echo "<h1>Deleded client!</h1>"; //zrbcie frontend
+    }
+    if(isset($_GET["noclient"])){
+        echo "<h1>There is no such client!</h1>"; //zrbcie frontend
+    }
     ?>
     <form action="/crm/api/drop_client/" method="POST">
         <label for="id">

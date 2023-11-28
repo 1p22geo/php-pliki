@@ -30,7 +30,7 @@ class Client{
 
     public function save(){
         $f = fopen($_SERVER["DOCUMENT_ROOT"]."/crm/data/clients.txt", "a");
-        fwrite($f, "$this->imie:$this->email:$this->status:$this->id\n");
+        fwrite($f, $this->get_line()."\n");
         fclose($f);
     }
 
@@ -50,6 +50,41 @@ class Client{
         return $clients;
     }
 
+    public static function get_client($client_id){
+        $f = fopen($_SERVER["DOCUMENT_ROOT"]."/crm/data/clients.txt", "r");
+
+        while(false !== ($line = fgets($f))){
+
+            $l = explode(":", $line);
+            $client = new Client($l[0], $l[1], $l[2], $l[3]);
+
+            if($client->id==$client_id){
+                fclose($f);
+                return $client;
+            }
+        }
+        fclose($f);
+        return null;
+    }
+    public function get_line(){
+        return "$this->imie:$this->email:$this->status:$this->id";
+    }
+
+    public static function del_client($client_id){
+        echo "starting del_cleint";
+        $client = self::get_client($client_id);
+        if(!$client){
+            return 1;
+        }
+        
+        $line = $client->get_line();
+        
+        $f = $_SERVER["DOCUMENT_ROOT"]."/crm/data/clients.txt";
+        $contents = file_get_contents($f);
+        $contents = str_replace($line, '', $contents);
+        file_put_contents($f, $contents);
+
+    }
 
 }
 
