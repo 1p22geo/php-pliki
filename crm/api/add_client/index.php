@@ -16,7 +16,8 @@ $status = $_POST["sub"];
 
 $client = new Client($imie, $email, $status);
 
-echo $client->id;
+$client->save();
 
+header("Location: /crm/add_client/?saved=true")
 
 ?>
