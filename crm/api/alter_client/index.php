@@ -22,7 +22,7 @@ Client::del_client($id);
 $client = new Client($imie, $email, $status, $id);
 $client->save();
 
-header("Location: "."/crm/alter_client/?id=$id&saved=true");
+header("Location: /crm/alter_client/?id=".$id."&saved=true");
 die();
 
 ?>
