@@ -22,7 +22,15 @@ Client::del_client($id);
 $client = new Client($imie, $email, $status, $id);
 $client->save();
 
-header("Location: /crm/alter_client/?id=".$id."&saved=true");
-die();
+if(preg_match('/[0-9]*/', $id))
+{
+$redirect_id = intval($id);
 
+
+header("Location: /crm/alter_client/?id=".intval($redirect_id)."&saved=true");
+die();
+}
+else{
+die("Invalid data")
+}
 ?>
