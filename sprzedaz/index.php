@@ -6,15 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="/"><button>MENU</button></a>
-    <button>dodaj transakcję</button>
-    <button>wyświetl transakcje</button>
-    <button>aktualizuj transakcję</button>
-    <button>usuń transakcję</button>
-    <button>największa transakcja</button>
-    <button>najbardziej przychodowy produkt</button>
-    <button>liczba transakcji między</button>
-    <button>cena transakcji między</button>
+    <a href="/">MENU</a>
+    <a href="/sprzedaz/add/">Dodaj transakcję</a>
+    <a href="/sprzedaz/get/">Pobierz transakcję</a>
+    <a href="/sprzedaz/upd/">Aktualizuj transakcję</a>
+    <a href="/sprzedaz/del/">Usuń transakcję</a>
+    <a href="/sprzedaz/top/">Największa transakcja</a>
+    <a href="/sprzedaz/top_product/">Najbardziej przychodowy produkt</a>
+    <a href="/sprzedaz/number_btw/">Liczba transakcji między</a>
+    <a href="/sprzedaz/price_btw/">Cena transakcji między</a>
 </body>
 
 </html>
