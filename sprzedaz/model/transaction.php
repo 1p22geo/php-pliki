@@ -6,9 +6,9 @@ class Transaction{
   public $date;
   public $id;
   public function __construct($price, $product, $date, $new_id=null){
-    $this->price = $price;
     $this->product = $product;
-    $this->date = $date;
+    $this->price = floatval($price);
+    $this->date = DateTime::createFromFormat("Y-m-d", $date);
         if(!$new_id){
 
             $f = fopen($_SERVER["DOCUMENT_ROOT"]."/sprzedaz/model/id.counter", "r");
@@ -29,7 +29,9 @@ class Transaction{
 
   }
   public function get_line(){
-        return "$this->id:$this->product:$this->price:$this->date";
+        $date = $this->date->format("Y-m-d");
+        $price = strval($this->price);
+        return "$this->id:$this->product:$price:$date";
     }
   public function save(){
         $f = fopen($_SERVER["DOCUMENT_ROOT"]."/sprzedaz/data/data.txt", "a");

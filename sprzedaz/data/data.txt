@@ -1,2 +1,10 @@
 2:pomarańcze:23.00:2023-12-13
-3:pomarańcze:23.00:2023-12-13
+4:jabłka:12.50:2023-12-14
+5:stół:139.99:2023-12-21
+6:ogórki kiszone:98.23:2023-12-04
+7:krzesło rozkładane ÖSTANÖ promocja:44.99:2023-11-08
+8:sofa 2-osobowa ÄPPLARYD:230:2023-12-13
+10:mandarynki:13:2023-11-07
+11:mandarynki:45.02:2024-01-11
+12:mandarynki:265.34:2024-01-12
+13:mandarynki:56:2023-12-05

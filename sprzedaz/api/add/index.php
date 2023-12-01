@@ -15,6 +15,8 @@ $price = $_POST["price"];
 $date = $_POST["date"];
 
 $tr = new Transaction($price, $product, $date);
-$tr->save()
+$tr->save();
 
+header("Location: /sprzedaz/add/?saved=true");
+die();
 ?>
