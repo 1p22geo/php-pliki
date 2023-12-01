@@ -1,0 +1,11 @@
+{
+    "name": "bartoszg/pehap",
+    "type": "project",
+    "authors": [
+        {
+            "name": "1p22geo",
+            "email": "1p22geodecki@gmail.com"
+        }
+    ],
+    "require": {}
+}
