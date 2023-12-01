@@ -1,1 +1,2 @@
 paweł:nr@wp.pl:false:26
+Bartosz:bartogeo@outlook.com:true:28
