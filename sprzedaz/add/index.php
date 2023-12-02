@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dodaj klienta</title>
+    <title>Dodaj transakcje</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-slate-400">
@@ -12,10 +12,10 @@
     <form action="/sprzedaz/api/add/" method="POST" class="w-1/3 bg-slate-600 shadow-md rounded px-8 pt-6 pb-8 mb-4">
     <?php 
     if(isset($_GET["nodata"])){
-        echo "<h1 class='text-2xl mb-2 text-red-500'>Please type in all data</h1>"; //zrbcie frontend
+        echo "<h1 class='text-2xl mb-2 text-red-500'>Prosze wpisać dane transakcji</h1>";
     }
     if(isset($_GET["saved"])){
-        echo "<h1 class='text-2xl mb-2 text-green-500'>Added transaction!</h1>"; //zrbcie frontend
+        echo "<h1 class='text-2xl mb-2 text-green-500'>Dodano transakcję!</h1>";
     }
     ?>
         <label for="product" class="block text-gray-200 text-sm font-bold mb-2">
