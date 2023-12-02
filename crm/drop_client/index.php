@@ -3,28 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dodaj klienta</title>
+    <title>Zabij klienta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-slate-400">
     <a href="/crm">BACK</a>
     <?php 
     if(isset($_GET["nodata"])){
-        echo "<h1>Please type in the username and fasdgasdg</h1>"; //zrbcie frontend
+        echo "<h1>Prosze wpisać imie klienta do uciszenia</h1>";
     }
     if(isset($_GET["saved"])){
-        echo "<h1>Deleded client!</h1>"; //zrbcie frontend
+        echo "<h1>Zlikwidowano klienta!</h1>";
     }
     if(isset($_GET["noclient"])){
-        echo "<h1>There is no such client!</h1>"; //zrbcie frontend
+        echo "<h1>Nie ma takiego klienta</h1>";
     }
     ?>
-    <form action="/crm/api/drop_client/" method="POST">
+    <form action="/crm/api/drop_client/" method="POST" class="w-1/3 bg-slate-600 shadow-md rounded px-8 pt-6 pb-8 mb-4">
         <label for="id">
             ID klienta:
             <input id="id" name="id"><br>
         </label> 
         
-        <input type="submit" value="submit">
+        <input type="submit" value="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline m-4">
     </form>
 </body>
 </html>
