@@ -16,7 +16,7 @@
     echo "<table class='border-2'><tr class='p-2'><th class='p-2'>Produkt</th> <th class='p-2'>Cena</th> <th class='p-2'>Data</th> <th class='p-2'>ID</th></tr>";
 
     foreach ($transactions as $tr) {
-        $date = "";# $tr->date->format("Y-m-d");
+        $date = $tr->date->format("Y-m-d");
         $price = strval($tr->price);
     echo "<tr>
     <td class='p-2'>$tr->product</td>

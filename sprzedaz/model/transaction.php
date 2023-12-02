@@ -52,7 +52,35 @@ class Transaction{
 
         fclose($f);
         return $transactions;
+  }
+  public static function get_by_id($id){
+        $f = fopen($_SERVER["DOCUMENT_ROOT"]."/sprzedaz/data/data.txt", "r");
+
+        while(false !== ($line = fgets($f))){
+
+            $l = explode(":", $line);
+            $tr = new Transaction($l[2], $l[1], trim($l[3]), $l[0]);
+
+            if($tr->id==$id){
+                fclose($f);
+                return $tr;
+            }
+        }
+        fclose($f);
+        return null;
     }
+  public static function del($id){
+    $tr = Transaction::get_by_id($id);
+    if(!$tr){
+      return 1;
+    }
+    $line = $tr->get_line();
+    $f = $_SERVER["DOCUMENT_ROOT"]."/sprzedaz/data/data.txt";
+    $contents = file_get_contents($f);
+    $contents = str_replace($line."\n", '', $contents);
+    file_put_contents($f, $contents);
+
+  }
 }
 
 ?>

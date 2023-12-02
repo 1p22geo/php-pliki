@@ -31,6 +31,8 @@ header("Location: /crm/alter_client/?id=".intval($redirect_id)."&saved=true");
 die();
 }
 else{
-die("Invalid data")
+die("Invalid data");
 }
+
+
 ?>
