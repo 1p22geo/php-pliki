@@ -8,7 +8,7 @@
 <body>
     <a href="/">MENU</a>
     <a href="/sprzedaz/add/">Dodaj transakcję</a>
-    <a href="/sprzedaz/get/">Pobierz transakcję</a>
+    <a href="/sprzedaz/get/">Pobierz transakcje</a>
     <a href="/sprzedaz/upd/">Aktualizuj transakcję</a>
     <a href="/sprzedaz/del/">Usuń transakcję</a>
     <a href="/sprzedaz/top/">Największa transakcja</a>

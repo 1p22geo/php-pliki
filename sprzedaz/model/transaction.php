@@ -37,6 +37,21 @@ class Transaction{
         $f = fopen($_SERVER["DOCUMENT_ROOT"]."/sprzedaz/data/data.txt", "a");
         fwrite($f, $this->get_line()."\n");
         fclose($f);
+  }
+  public static function load(){
+        $transactions = [];
+        $f = fopen($_SERVER["DOCUMENT_ROOT"]."/sprzedaz/data/data.txt", "r");
+
+        while(false !== ($line = fgets($f))){
+
+            $l = explode(":", $line);
+            $tr = new Transaction($l[2], $l[1], trim($l[3]), $l[0]);
+
+            array_push($transactions, $tr);
+        }
+
+        fclose($f);
+        return $transactions;
     }
 }
 
