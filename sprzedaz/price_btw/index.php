@@ -10,9 +10,9 @@
     <a href="/sprzedaz/">BACK</a>
     <?php 
 if(!isset($_GET["start"]) || !isset($_GET["stop"])){
-  echo "<h1>Proszę wybrać zakres czasu</h1>
-    <form action='/sprzedaz/price_btw/' method='GET'>
-
+  echo "
+    <form action='/sprzedaz/price_btw/' method='GET' class='w-1/3 bg-slate-600 shadow-md rounded px-8 pt-6 pb-8 mb-4 text-gray-200 text-sm font-bold mb-2'>
+    <h1>Proszę wybrać zakres czasu</h1>
 <label for=start>
             start:
             <input id=start name=start type=date><br>
@@ -22,7 +22,7 @@ if(!isset($_GET["start"]) || !isset($_GET["stop"])){
             <input id=stop name=stop type=date><br>
         </label> 
        
-        <input type=submit value=submit>
+        <input type=submit value=submit class='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline m-4'>
 
 </form>    
     ";
