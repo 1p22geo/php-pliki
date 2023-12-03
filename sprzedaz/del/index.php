@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dodaj klienta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-slate-400">
     <a href="/sprzedaz/">BACK</a>
     <?php 
     if(isset($_GET["nodata"])){
@@ -19,7 +20,7 @@
     }
     ?>
     <form action="/sprzedaz/api/del/" method="POST">
-        <label for="id">
+        <label for="id" class="block text-gray-200 text-sm font-bold mb-2">
             ID:
             <input id="id" name="id"><br>
         </label> 

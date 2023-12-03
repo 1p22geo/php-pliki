@@ -26,7 +26,7 @@ echo '
 <form action="/sprzedaz/upd/" method="GET" class="w-1/3 bg-slate-600 shadow-md rounded px-8 pt-6 pb-8 mb-4">
     <label for="id">
         ID transakcji:
-        <input id="id" name="id"><br>
+        <input id="id" class="text-gray-200 text-sm font-bold mb-2" name="id"><br>
     </label> 
     
     <input type="submit" value="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline m-4">
