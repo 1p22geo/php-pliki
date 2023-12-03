@@ -13,15 +13,15 @@
 
     $clients = Client::load();
 
-    echo "<table class='w-1/3 bg-slate-600 shadow-md rounded px-8 pt-6 pb-8 mb-4'><tr class='p-2'><th class='p-2'>Imie</th> <th class='p-2'>Email</th> <th class='p-2'>Subskrybcja</th> <th class='p-2'>ID</th></tr>";
+    echo "<table class=' text-gray-200 text-sm font-bold mb-2 w-1/3 bg-slate-600 shadow-md rounded px-8 pt-6 pb-8 mb-4'><tr class='p-2'><th class='p-2'>Imie</th> <th class='p-2'>Email</th> <th class='p-2'>Subskrybcja</th> <th class='p-2'>ID</th></tr>";
 
     foreach ($clients as $client) {
         $sub = ($client->status=="true")?"<span>tak</span>":"<span>nie</span>";
     echo "<tr>
-    <td class='p-2'>$client->imie</td>
-    <td class='p-2'>$client->email</td>
-    <td class='p-2'>$sub</td>
-    <td class='p-2'>$client->id</td>
+    <td class='p-2 text-gray-200 text-sm font-bold mb-2'>$client->imie</td>
+    <td class='p-2 text-gray-200 text-sm font-bold mb-2'>$client->email</td>
+    <td class='p-2 text-gray-200 text-sm font-bold mb-2'>$sub</td>
+    <td class='p-2 text-gray-200 text-sm font-bold mb-2'>$client->id</td>
     </tr>";
     }
 
