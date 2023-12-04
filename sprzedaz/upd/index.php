@@ -23,11 +23,11 @@
     }
     if(!isset($_GET["id"])){
 echo '
-<form action="/sprzedaz/upd/" method="GET" class=" w-1/3 bg-slate-600 shadow-md rounded px-8 pt-6 pb-8 mb-4 text-gray-200 text-sm font-bold mb-2" name="id">
-        <label for="id" class="text-gray-200 text-sm font-bold mb-2">
-        ID transakcji:
-        <input id="id" name="id"><br>
+<form action="/sprzedaz/upd/" method="GET" class=" w-1/3 bg-slate-600 shadow-md rounded px-8 pt-6 pb-8 mb-4 text-sm font-bold mb-2" name="id">
+    <label for="id" class="text-gray-200 text-sm font-bold mb-2">
+      ID transakcji:
     </label> 
+    <input id="id" name="id"><br>
     
     <input type="submit" value="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline m-4">
 </form>
