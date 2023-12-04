@@ -30,7 +30,7 @@ class Client{
 
     public function save(){
         $f = fopen($_SERVER["DOCUMENT_ROOT"]."/crm/data/clients.txt", "a");
-        fwrite($f, $this->get_line()."\n");
+        fwrite($f, $this->get_line().PHP_EOL);
         fclose($f);
     }
 

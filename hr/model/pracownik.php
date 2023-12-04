@@ -37,7 +37,7 @@ class Pracownik{
     }
   public function save(){
         $f = fopen($_SERVER["DOCUMENT_ROOT"]."/hr/data/data.txt", "a");
-        fwrite($f, $this->get_line()."\n");
+        fwrite($f, $this->get_line().PHP_EOL);
         fclose($f);
   }
   public static function load(){
@@ -79,7 +79,7 @@ class Pracownik{
     $line = $tr->get_line();
     $f = $_SERVER["DOCUMENT_ROOT"]."/hr/data/data.txt";
     $contents = file_get_contents($f);
-    $contents = str_replace($line."\n", '', $contents);
+    $contents = str_replace($line.PHP_EOL, '', $contents);
     file_put_contents($f, $contents);
 
   }
