@@ -12,14 +12,14 @@
 
     require("../model/pracownik.php");
     if(isset($_GET["notran"])){
-        echo "Brak asdgadsgasgasdgasdgas";
+        echo "Brak pracownika";
     }
     if(isset($_GET["nodata"])){
         echo "Proszę wpisać nowe dane";
     }
 
     if(isset($_GET["saved"])){
-        echo "Pomyslnie zaaktualisdgdzowano";
+        echo "Pomyslnie zaaktualizowano";
     }
     if(!isset($_GET["id"])){
 echo '
@@ -51,16 +51,24 @@ echo '
         <form action="/sprzedaz/api/upd/" method="POST" class="w-1/3 bg-slate-600 shadow-md rounded px-8 pt-6 pb-8 mb-4">
         <input class="hidden" hidden name="id" value="$tr->id">
             <label for="product" class="block text-gray-200 text-sm font-bold mb-2">
-                Produkt:
-                <input value="$tr->product" class="shadow appearance-none border rounded w-1/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="product" name="product"><br>
+                Imie:
+                <input value="$tr->imie" class="shadow appearance-none border rounded w-1/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="product" name="product"><br>
             </label> 
             <label class="block text-gray-200 text-sm font-bold mb-2" for="price">
-                Cena:
-                <input value="$tr->price" class="shadow appearance-none border rounded w-1/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="price" name="price"><br>
+                Data zatrudnienia:
+                <input value="$ent" class="shadow appearance-none border rounded w-1/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="price" name="price"><br>
             </label> 
             <label class="block text-gray-200 text-sm font-bold mb-2" for="date">
-                Data:
-                <input value="$dt" class="shadow appearance-none border rounded w-1/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="date" id="date" name="date"><br>
+                Data urodzenia:
+                <input value="$bir" class="shadow appearance-none border rounded w-1/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="date" id="date" name="date"><br>
+            </label> 
+            <label class="block text-gray-200 text-sm font-bold mb-2" for="date">
+                Oddzial:
+                <input value="$tr->odd" class="shadow appearance-none border rounded w-1/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="date" id="date" name="date"><br>
+            </label> 
+            <label class="block text-gray-200 text-sm font-bold mb-2" for="date">
+                Data urodzenia:
+                <input value="$bir" class="shadow appearance-none border rounded w-1/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="date" id="date" name="date"><br>
             </label> 
 
             <input class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" value="submit">
