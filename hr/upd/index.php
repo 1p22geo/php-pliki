@@ -25,7 +25,7 @@
 echo '
 <form action="/hr/upd/" method="GET" class=" w-1/3 bg-slate-600 shadow-md rounded px-8 pt-6 pb-8 mb-4 text-sm font-bold mb-2" name="id">
     <label for="id" class="text-gray-200 text-sm font-bold mb-2">
-      ID prawconwnika:
+      ID pracownika:
     </label> 
     <input id="id" name="id"><br>
     
@@ -48,7 +48,7 @@ echo '
         $bir = $tr->birth->format("Y-m-d");
 
         echo <<<EOF
-        <form action="/sprzedaz/api/upd/" method="POST" class="w-1/3 bg-slate-600 shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <form action="/hr/api/upd/" method="POST" class="w-1/3 bg-slate-600 shadow-md rounded px-8 pt-6 pb-8 mb-4">
         <input class="hidden" hidden name="id" value="$tr->id">
             <label for="product" class="block text-gray-200 text-sm font-bold mb-2">
                 Imie:
