@@ -24,10 +24,11 @@
     if(!isset($_GET["id"])){
 echo '
 <form action="/crm/alter_client/" method="GET" class="w-1/3 bg-slate-600 shadow-md rounded px-8 pt-6 pb-8 mb-4">
-    <label for="id" class="block text-gray-200 text-sm font-bold mb-2">
+    <label for="id" class="text-gray-200 text-sm font-bold mb-2">
         ID klienta:
+        </label> 
         <input id="id" name="id"><br>
-    </label> 
+
     
     <input type="submit" value="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline m-4">
 </form>

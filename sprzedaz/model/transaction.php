@@ -35,7 +35,7 @@ class Transaction{
     }
   public function save(){
         $f = fopen($_SERVER["DOCUMENT_ROOT"]."/sprzedaz/data/data.txt", "a");
-        fwrite($f, $this->get_line().PHP_EOL);
+        fwrite($f, $this->get_line()."\n");
         fclose($f);
   }
   public static function load(){
@@ -77,7 +77,7 @@ class Transaction{
     $line = $tr->get_line();
     $f = $_SERVER["DOCUMENT_ROOT"]."/sprzedaz/data/data.txt";
     $contents = file_get_contents($f);
-    $contents = str_replace($line.PHP_EOL, '', $contents);
+    $contents = str_replace($line."\n", '', $contents);
     file_put_contents($f, $contents);
 
   }
