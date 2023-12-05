@@ -49,6 +49,11 @@ EOF;
 
 
         foreach ($pracownicy as $p) {
+
+            if(intval($p->permissions) < intval($id)){
+                continue;
+            }
+
             $ent = $p->entry->format("Y-m-d");
             $bir = $p->birth->format("Y-m-d");
         echo "<tr>

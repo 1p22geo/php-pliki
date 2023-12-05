@@ -17,7 +17,7 @@ $birth = $_POST["birth"];
 $perm = $_POST["perm"];
 $oddz = $_POST["oddz"];
 
-$pr = new Pracownik($name, $entry, $birth, $oddz, $perm);
+$pr = new Pracownik($name, $entry, $birth, $perm, $oddz);
 $pr->save();
 
 
