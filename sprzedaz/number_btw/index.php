@@ -15,12 +15,14 @@ if(!isset($_GET["start"]) || !isset($_GET["stop"])){
     <h1>Proszę wybrać zakres czasu</h1>
 <label for=start>
             start:
+            </label> 
             <input id=start name=start type=date><br>
-        </label> 
+
  <label for=stop>
             stop:
+            </label> 
             <input id=stop name=stop type=date><br>
-        </label> 
+
        
         <input type=submit value=submit class='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline m-4'>
 

@@ -56,10 +56,10 @@ else{
         $date = $tr->date->format("Y-m-d");
         $price = strval($tr->price);
     echo "<tr>
-    <td class='p-2'>$tr->product</td>
-    <td class='p-2'>$price</td>
-    <td class='p-2'>$date</td>
-    <td class='p-2'>$tr->id</td>
+    <td class='text-gray-200 text-sm font-bold mb-2'>$tr->product</td>
+    <td class='text-gray-200 text-sm font-bold mb-2'>$price</td>
+    <td class='text-gray-200 text-sm font-bold mb-2'>$date</td>
+    <td class='text-gray-200 text-sm font-bold mb-2'>$tr->id</td>
     </tr>";
     }
 

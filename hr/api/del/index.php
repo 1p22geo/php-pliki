@@ -2,12 +2,12 @@
 
 require("../../model/pracownik.php");
 
-if((!isset($_POST["id"]))){
+if ((!isset($_POST["id"]))) {
     header("Location: /hr/del/?nodata=true");
     die();
 
 }
-if((!($_POST["id"]))){
+if ((!($_POST["id"]))) {
     header("Location: /hr/del/?nodata=true");
     die();
 
@@ -15,12 +15,13 @@ if((!($_POST["id"]))){
 
 $id = $_POST["id"];
 
-if(Pracownik::del($id)){
+if (Pracownik::del($id)) {
     header("Location: /hr/del/?notran=true");
     die();
-};
+}
+;
 
-    header("Location: /hr/del/?saved=true");
+header("Location: /hr/del/?saved=true");
 die();
 
 ?>

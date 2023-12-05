@@ -8,11 +8,11 @@ class Pracownik{
   public $permissions;
   public $id;
   public function __construct($name, $entry, $birth, $permissions, $oddz, $new_id=null){
-    $this->imie = $name;
-    $this->oddz = $oddz;
+    $this->imie = trim($name);
+    $this->oddz = trim($oddz);
     $this->entry = DateTime::createFromFormat("Y-m-d", $entry);
     $this->birth = DateTime::createFromFormat("Y-m-d", $birth);
-    $this->permissions = $permissions;
+    $this->permissions = trim($permissions);
         if(!$new_id){
 
             $f = fopen($_SERVER["DOCUMENT_ROOT"]."/hr/model/id.counter", "r");
