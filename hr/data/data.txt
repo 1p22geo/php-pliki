@@ -2,3 +2,4 @@
 10:Karol Staruszek:2023-12-09:1980-07-17:dep1:3
 9:Karol Stanisław:2023-12-01:2000-06-05:dep4:2
 12:Paweł NIEUSUWAĆ:2023-12-01:2001-12-02:dep2:2
+13:Paweł Najrodka:2023-12-01:2001-12-04:dep1:1
