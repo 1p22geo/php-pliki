@@ -52,23 +52,23 @@ echo '
         <input class="hidden" hidden name="id" value="$tr->id">
             <label for="product" class="block text-gray-200 text-sm font-bold mb-2">
                 Imie:
-                <input value="$tr->imie" class="shadow appearance-none border rounded w-1/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="product" name="product"><br>
+                <input value="$tr->imie" class="shadow appearance-none border rounded w-1/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="imie" name="name"><br>
             </label> 
             <label class="block text-gray-200 text-sm font-bold mb-2" for="price">
                 Data zatrudnienia:
-                <input value="$ent" class="shadow appearance-none border rounded w-1/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="price" name="price"><br>
+                <input value="$ent" class="shadow appearance-none border rounded w-1/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="wejscie" name="entry"><br>
             </label> 
             <label class="block text-gray-200 text-sm font-bold mb-2" for="date">
                 Data urodzenia:
-                <input value="$bir" class="shadow appearance-none border rounded w-1/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="date" id="date" name="date"><br>
+                <input value="$bir" class="shadow appearance-none border rounded w-1/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="date" id="urodzenie" name="birth"><br>
             </label> 
             <label class="block text-gray-200 text-sm font-bold mb-2" for="date">
                 Oddzial:
-                <input value="$tr->odd" class="shadow appearance-none border rounded w-1/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="date" id="date" name="date"><br>
+                <input value="$tr->oddz" class="shadow appearance-none border rounded w-1/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="upr" name="perm"><br>
             </label> 
             <label class="block text-gray-200 text-sm font-bold mb-2" for="date">
-                Data urodzenia:
-                <input value="$bir" class="shadow appearance-none border rounded w-1/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="date" id="date" name="date"><br>
+                Uprawnienia:
+                <input value="$tr->permissions" class="shadow appearance-none border rounded w-1/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="oddz" name="oddz"><br>
             </label> 
 
             <input class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" value="submit">
