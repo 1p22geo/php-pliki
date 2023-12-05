@@ -4,10 +4,12 @@ class Pracownik{
   public $imie;
   public $entry;
   public $birth;
+  public $oddz;
   public $permissions;
   public $id;
-  public function __construct($name, $entry, $birth, $permissions, $new_id=null){
+  public function __construct($name, $entry, $birth, $permissions, $oddz, $new_id=null){
     $this->imie = $name;
+    $this->oddz = $oddz;
     $this->entry = DateTime::createFromFormat("Y-m-d", $entry);
     $this->birth = DateTime::createFromFormat("Y-m-d", $birth);
     $this->permissions = $permissions;
@@ -33,7 +35,7 @@ class Pracownik{
   public function get_line(){
         $entry = $this->entry->format("Y-m-d");
         $birth = $this->birth->format("Y-m-d");
-        return "$this->id:$this->imie:$entry:$birth:$this->permissions";
+        return "$this->id:$this->imie:$entry:$birth:$this->permissions:$this->oddz";
     }
   public function save(){
         $f = fopen($_SERVER["DOCUMENT_ROOT"]."/hr/data/data.txt", "a");
@@ -47,7 +49,7 @@ class Pracownik{
         while(false !== ($line = fgets($f))){
 
             $l = explode(":", $line);
-            $p = new Pracownik($l[1], $l[2], $l[3], $l[4], $l[0]);
+            $p = new Pracownik($l[1], $l[2], $l[3], $l[4], $l[5], $l[0]);
 
             array_push($pr, $p);
         }
@@ -61,7 +63,7 @@ class Pracownik{
         while(false !== ($line = fgets($f))){
 
             $l = explode(":", $line);
-            $tr = new Pracownik($l[1], $l[2], $l[3], $l[4], $l[0]);
+            $tr = new Pracownik($l[1], $l[2], $l[3], $l[4], $l[5], $l[0]);
 
             if($tr->id==$id){
                 fclose($f);
